@@ -37,8 +37,7 @@ Open `index.html` in any browser. No install or build step.
 این پروژه روی GitHub Pages منتشر شده است:
 This project is hosted on GitHub Pages:
 
-`https://amiralidlb93-hash.github.io/shiraz-table/`
-
+https://amiralidlb93-hash.github.io/shiraz-table/
 ## فونت‌ها | Fonts
 
 [Vazirmatn](https://github.com/rastikerdar/vazirmatn) و Playfair Display از Google Fonts.
