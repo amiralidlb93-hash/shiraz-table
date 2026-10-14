@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سفره‌خانه شیراز | Shiraz Table</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf5ea;--card:#fffdf8;--ink:#2a1c14;--mute:#7d685a;--accent:#0b5d51;--accent2:#073f37;--gold:#b97f1c;--goldl:#e2b04a;--line:#e6d6bd;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15100c;--card:#21170f;--ink:#f5ead9;--mute:#b9a48f;--accent:#3fb7a0;--accent2:#0a3a33;--gold:#e2b04a;--goldl:#f0c565;--line:#392a1f}}
+:root[data-theme="dark"]{--bg:#15100c;--card:#21170f;--ink:#f5ead9;--mute:#b9a48f;--accent:#3fb7a0;--accent2:#0a3a33;--gold:#e2b04a;--goldl:#f0c565;--line:#392a1f}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Vazirmatn',system-ui,Tahoma,sans-serif;line-height:1.85;overflow-x:hidden}
+html[lang=en] .serif{font-family:'Playfair Display',Georgia,serif;letter-spacing:.2px}
+html[lang=fa] .en,html[lang=en] .fa{display:none!important}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px}
+.logo{font-weight:800;color:var(--accent);font-size:1.15rem;white-space:nowrap}
+nav{display:flex;gap:20px;font-size:.95rem;overflow-x:auto}
+nav a{color:var(--ink);text-decoration:none;white-space:nowrap}
+nav a:hover{color:var(--gold)}
+.lang{border:1.5px solid var(--gold);background:transparent;color:var(--ink);border-radius:999px;padding:3px 14px;cursor:pointer;font:inherit;font-size:.88rem}
+.hero{position:relative;text-align:center;padding:84px 20px 96px;color:#fff6e4;background:
+ radial-gradient(circle at 50% 120%,rgba(226,176,74,.35),transparent 60%),
+ repeating-conic-gradient(from 45deg at 50% 50%,rgba(255,255,255,.045) 0 25%,transparent 0 50%) 0 0/44px 44px,
+ linear-gradient(160deg,var(--accent),var(--accent2));overflow:hidden}
+.hero .tag{display:inline-block;border:1px solid var(--goldl);color:var(--goldl);border-radius:999px;padding:2px 16px;font-size:.85rem;margin-bottom:16px}
+.hero h1{font-size:clamp(2.1rem,6.5vw,3.9rem);margin:0 0 10px;font-weight:800;line-height:1.3}
+.hero p{max-width:560px;margin:0 auto 28px;opacity:.93}
+.hero .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--goldl);color:#2a1c14;padding:11px 28px;border-radius:999px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.btn.o{background:transparent;color:#fff6e4;border:1.5px solid #fff6e4;box-shadow:none}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:34px;background:var(--bg);clip-path:ellipse(60% 100% at 50% 100%)}
+section{max-width:980px;margin:0 auto;padding:56px 20px}
+h2{color:var(--accent);font-size:1.8rem;margin:0 0 26px;text-align:center;font-weight:800}
+h2::after{content:"❖";display:block;color:var(--gold);font-size:1rem;margin-top:2px}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.about .lead{grid-column:1/-1;text-align:center;color:var(--mute);max-width:640px;margin:0 auto 8px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;text-align:center}
+.feat i{font-style:normal;font-size:1.9rem;display:block}
+.feat b{color:var(--accent)}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.tab{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 20px;cursor:pointer;font:inherit}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.cat[hidden]{display:none}
+.item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;transition:transform .2s,box-shadow .2s}
+.item:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.1)}
+.top{display:flex;align-items:baseline;gap:8px;font-weight:600}
+.top .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:12px}
+.price{color:var(--gold);white-space:nowrap;font-weight:800;font-size:.95rem}
+.item p{margin:4px 0 0;font-size:.88rem;color:var(--mute)}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;text-align:center}
+.info .item{padding:22px}
+.info i{font-style:normal;font-size:1.6rem;display:block}
+footer{text-align:center;padding:28px 20px;color:var(--mute);border-top:1px solid var(--line);font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><span class="fa">سفره‌خانه شیراز</span><span class="en serif">Shiraz Table</span></div>
+  <nav>
+    <a href="#about"><span class="fa">درباره ما</span><span class="en">About</span></a>
+    <a href="#menu"><span class="fa">منو</span><span class="en">Menu</span></a>
+    <a href="#contact"><span class="fa">تماس</span><span class="en">Contact</span></a>
+  </nav>
+  <button class="lang" id="lang" aria-label="Change language"></button>
+</header>
+
+<div class="hero">
+  <span class="tag"><span class="fa">از ۱۳۸۵</span><span class="en">Since 2006</span></span>
+  <h1><span class="fa">طعم اصیل ایران</span><span class="en serif">The Authentic Taste of Iran</span></h1>
+  <p><span class="fa">کباب زغالی، خورشت‌های سنتی و زعفران اصل؛ در فضایی گرم و صمیمی مثل خانه.</span><span class="en">Charcoal kebabs, traditional stews and real saffron, in a warm, home-like setting.</span></p>
+  <div class="btns">
+    <a class="btn" href="#menu"><span class="fa">مشاهده منو</span><span class="en">View Menu</span></a>
+    <a class="btn o" href="#contact"><span class="fa">رزرو میز</span><span class="en">Reserve a Table</span></a>
+  </div>
+</div>
+
+<section id="about">
+  <h2><span class="fa">درباره ما</span><span class="en serif">About Us</span></h2>
+  <div class="about">
+    <p class="lead"><span class="fa">دستور پخت‌های ما از آشپزخانه‌های خانوادگی شیراز و اصفهان آمده است؛ هر روز مواد تازه و برنج دم‌کشیده با عشق آماده می‌شود.</span><span class="en">Our recipes come from family kitchens in Shiraz and Isfahan. Every day we prepare fresh ingredients and slow-steamed rice with love.</span></p>
+    <div class="feat"><i>🔥</i><b><span class="fa">کباب زغالی</span><span class="en">Charcoal Grill</span></b></div>
+    <div class="feat"><i>🌿</i><b><span class="fa">مواد تازه</span><span class="en">Fresh Ingredients</span></b></div>
+    <div class="feat"><i>🍚</i><b><span class="fa">برنج ایرانی</span><span class="en">Persian Rice</span></b></div>
+  </div>
+</section>
+
+<section id="menu">
+  <h2><span class="fa">منو</span><span class="en serif">Menu</span></h2>
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-c="all"><span class="fa">همه</span><span class="en">All</span></button>
+    <button class="tab" data-c="s"><span class="fa">پیش‌غذا</span><span class="en">Starters</span></button>
+    <button class="tab" data-c="m"><span class="fa">غذای اصلی</span><span class="en">Mains</span></button>
+    <button class="tab" data-c="d"><span class="fa">دسر و نوشیدنی</span><span class="en">Desserts &amp; Drinks</span></button>
+  </div>
+  <div class="grid" id="items">
+    <div class="item cat" data-c="s"><div class="top"><span><span class="fa">کشک بادمجان</span><span class="en">Kashk Bademjan</span></span><span class="dots"></span><span class="price" data-p="650000"></span></div><p><span class="fa">بادمجان کبابی، کشک، پیاز داغ و نعنا داغ</span><span class="en">Roasted eggplant, whey, fried onion and mint</span></p></div>
+    <div class="item cat" data-c="s"><div class="top"><span><span class="fa">میرزاقاسمی</span><span class="en">Mirza Ghasemi</span></span><span class="dots"></span><span class="price" data-p="600000"></span></div><p><span class="fa">بادمجان دودی، گوجه، سیر و تخم‌مرغ</span><span class="en">Smoked eggplant, tomato, garlic and egg</span></p></div>
+    <div class="item cat" data-c="s"><div class="top"><span><span class="fa">آش رشته</span><span class="en">Ash Reshteh</span></span><span class="dots"></span><span class="price" data-p="550000"></span></div><p><span class="fa">آش سنتی با سبزی، حبوبات و رشته</span><span class="en">Herb and bean soup with noodles</span></p></div>
+    <div class="item cat" data-c="m"><div class="top"><span><span class="fa">چلوکباب کوبیده</span><span class="en">Chelo Kabab Koobideh</span></span><span class="dots"></span><span class="price" data-p="1700000"></span></div><p><span class="fa">دو سیخ کوبیده، برنج زعفرانی، گوجه کبابی</span><span class="en">Two minced meat skewers, saffron rice, grilled tomato</span></p></div>
+    <div class="item cat" data-c="m"><div class="top"><span><span class="fa">زرشک‌پلو با مرغ</span><span class="en">Zereshk Polo with Chicken</span></span><span class="dots"></span><span class="price" data-p="1500000"></span></div><p><span class="fa">مرغ زعفرانی با زرشک و پلو</span><span class="en">Saffron chicken with barberry rice</span></p></div>
+    <div class="item cat" data-c="m"><div class="top"><span><span class="fa">قورمه‌سبزی</span><span class="en">Ghormeh Sabzi</span></span><span class="dots"></span><span class="price" data-p="1450000"></span></div><p><span class="fa">خورشت سبزی با گوشت و لیمو عمانی</span><span class="en">Herb stew with beef and dried lime</span></p></div>
+    <div class="item cat" data-c="m"><div class="top"><span><span class="fa">فسنجان</span><span class="en">Fesenjan</span></span><span class="dots"></span><span class="price" data-p="1800000"></span></div><p><span class="fa">مرغ با سس گردو و انار</span><span class="en">Chicken in walnut and pomegranate sauce</span></p></div>
+    <div class="item cat" data-c="d"><div class="top"><span><span class="fa">بستنی زعفرانی</span><span class="en">Saffron Ice Cream</span></span><span class="dots"></span><span class="price" data-p="400000"></span></div><p><span class="fa">با پسته و گلاب</span><span class="en">With pistachio and rosewater</span></p></div>
+    <div class="item cat" data-c="d"><div class="top"><span><span class="fa">دوغ</span><span class="en">Doogh</span></span><span class="dots"></span><span class="price" data-p="150000"></span></div><p><span class="fa">نوشیدنی ماست و نعنا</span><span class="en">Yogurt and mint drink</span></p></div>
+    <div class="item cat" data-c="d"><div class="top"><span><span class="fa">چای ایرانی</span><span class="en">Persian Tea</span></span><span class="dots"></span><span class="price" data-p="120000"></span></div><p><span class="fa">با نبات یا خرما</span><span class="en">With rock candy or dates</span></p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2><span class="fa">تماس و ساعت کاری</span><span class="en serif">Contact &amp; Hours</span></h2>
+  <div class="info">
+    <div class="item"><i>🕒</i><b><span class="fa">ساعت کاری</span><span class="en">Hours</span></b><p><span class="fa">هر روز ۱۱:۰۰ تا ۲۳:۰۰</span><span class="en">Daily 11:00 – 23:00</span></p></div>
+    <div class="item"><i>📍</i><b><span class="fa">آدرس</span><span class="en">Address</span></b><p><span class="fa">خیابان نمونه، پلاک ۱۲</span><span class="en">12 Sample Street</span></p></div>
+    <div class="item"><i>📞</i><b><span class="fa">رزرو میز</span><span class="en">Reservations</span></b><p dir="ltr">+00 000 000 0000</p></div>
+  </div>
+</section>
+
+<footer>© 2026 <span class="fa">سفره‌خانه شیراز</span><span class="en">Shiraz Table</span></footer>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('lang');
+  function prices(l){
+    document.querySelectorAll('[data-p]').forEach(function(e){
+      var n=+e.dataset.p;
+      e.textContent=l==='fa'?n.toLocaleString('fa-IR')+' تومان':n.toLocaleString('en-US')+' Toman';
+    });
+  }
+  function set(l){
+    root.lang=l;root.dir=l==='fa'?'rtl':'ltr';
+    btn.textContent=l==='fa'?'English':'فارسی';
+    document.title=l==='fa'?'سفره‌خانه شیراز | رستوران ایرانی':'Shiraz Table | Persian Restaurant';
+    prices(l);
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  var s='fa';try{s=localStorage.getItem('lang')||'fa'}catch(e){}
+  set(s==='en'?'en':'fa');
+  btn.addEventListener('click',function(){set(root.lang==='fa'?'en':'fa')});
+  document.getElementById('tabs').addEventListener('click',function(e){
+    var t=e.target.closest('.tab');if(!t)return;
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.toggle('on',x===t)});
+    document.querySelectorAll('.cat').forEach(function(x){x.hidden=t.dataset.c!=='all'&&x.dataset.c!==t.dataset.c});
+  });
+})();
+</script>
+</body>
+</html>
